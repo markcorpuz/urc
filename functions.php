@@ -44,7 +44,7 @@ function ea_global_enqueues() {
 
 	// css
 	wp_dequeue_style( 'child-theme' );
-	wp_register_style( 'ea-fonts', ea_theme_fonts_url() );
+	wp_register_style( 'ea-fonts', setup_be_theme_fonts_url() );
 	wp_register_style( 'ea-critical', get_stylesheet_directory_uri() . '/assets/css/critical.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/critical.css' ) );
 	wp_register_style( 'ea-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
 
@@ -75,7 +75,7 @@ function ea_enqueue_noncritical_css() {
  *
  */
 function ea_gutenberg_scripts() {
-	wp_enqueue_style( 'ea-fonts', ea_theme_fonts_url() );
+	wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
 	wp_enqueue_script( 'ea-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
@@ -84,8 +84,9 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
  * Theme Fonts URL
  *
  */
-function ea_theme_fonts_url() {
-	return false;
+function setup_be_theme_fonts_url() {
+	//return false;
+	wp_enqueue_style( 'setup_be_google-font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900', array(), genesis_get_theme_version() );
 }
 
 /**
