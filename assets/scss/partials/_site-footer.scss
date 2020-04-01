@@ -1,71 +1,69 @@
+/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-footer.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background: brand-color( 'blue' );
-	padding: 40px 0 10px;
+
+	// BACKGROUND
+	background: brand-color( 'darkgrey' );
+
+	// COLOR
+	color: $white;
+
+	// SPACING
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+
 	position: relative;
-
-	ul {
-		margin-bottom: 30px;
-	}
-
-	li {
-		list-style-type: none;
-		margin-bottom: 12px;
-	}
-
-	.widget-title {
-		color: $white;
-		font-size: 16px;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
 
 	a {
 		color: $white;
 		text-decoration: none;
 
 		&:hover {
+			color: brand-color( 'blue' );
 			text-decoration: underline;
-		}
-
-		svg {
-			fill: $white;
-			@include icon-position( 20px );
-			margin-right: 12px;
 		}
 	}
 
-	@include media("<tablet") {
-		.social-links li {
-				display: inline-block;
-				margin: 0;
+	p {
+		> a {
+			text-decoration: underline;
 		}
+	}
 
-		.social-links .label {
-			display: none;
-		}
+	ul {
+		margin-bottom: 1rem;
+	}
 
-		.footer-widgets-1 {
-			float: left;
-			width: calc( 50% - 8px );
-		}
+	li {
+		list-style-type: none;
+		//margin-bottom: 0.875rem;
+	}
 
-		.footer-widgets-2 {
-			float: right;
-			width: calc( 50% - 8px );
+	& .footer-widgets-1 {
+		.widget:first-child {
+			margin-top: 0;
 		}
+	}
 
-		.footer-widgets-3 {
-			overflow: hidden;
-			width: 100%;
-		}
+	.widget {
+		margin-top: 3rem;
+	}
+
+	.widget-title {
+		text-transform: uppercase;
 	}
 
 	@include media(">=tablet") {
 		.wrap {
 			@include columns( 3, 'div' );
+		}
+
+		.widget:first-child {
+			margin-top: 0;
 		}
 	}
 }
@@ -74,71 +72,68 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background: brand-color( 'blue', 'darken' );
-	color: rgba( $white, .75 );
-	font-size: 14px;
-	padding: 32px 0;
-	text-align: center;
+	.module.copyright {
+		.item.logo {}
+		.item.info {}
+	}
+	.module.credit {
+		.item.info {}
+		.item.logo {}
+	}
+}
+
+.site-footer {
+
+	// BACKGROUND
+	background: brand-color( 'lightgrey' );
+
+	// SPACING
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	// SHADOW
+	-webkit-box-shadow: inset 5px 15px 10px -15px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 5px 15px 10px -15px rgba(0,0,0,0.15);
+	box-shadow: inset 5px 15px 10px -15px rgba(0,0,0,0.15);
 
 	.wrap > *:last-child {
 		margin-bottom: 0;
 	}
 
-	a {
-		color: rgba( $white, .75 );
+	// COPYRIGHT
+	.module.copyright {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
 
-		&:hover {
-			color: rgba( $white, 1 );
+		.info {
+			align-self: center;
+			@include font-sizes( 0.875rem, 1rem );
 		}
+		.logo {
+			align-self: center;
+		}
+
 	}
 
-	.footer-links a + a {
-		margin-left: 12px;
-	}
+	// CREDIT
+	.module.credit {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
 
-	.cafemedia {
-		text-transform: uppercase;
-	}
-
-	.backtotop {
-		background: rgba( $black, .75 );
-		border-radius: 3px;
-		display: inline-block;
-		line-height: 20px;
-		padding: 10px;
-		text-decoration: none;
-
-		svg {
-			fill: $white;
-			margin-left: 4px;
-			vertical-align: middle;
+		.info {
+			align-self: center;
+			font-size: 0.875rem;
+		}
+		.logo {
+			margin-top: 1rem;
+			font-size: 0.875rem;
+			align-self: center;
 		}
 
-		&:hover {
-			background: rgba( $black, 1 );
-		}
-	}
-
-	@include media(">=tablet") {
-		text-align: left;
-
-		.footer-left {
-			float: left;
-
-			& > *:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		.copyright,
-		.footer-links {
-			display: inline-block;
-			margin-right: 20px;
-		}
-
-		.backtotop {
-			float: right;
-		}
 	}
 
 }
