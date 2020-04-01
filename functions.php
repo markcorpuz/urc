@@ -113,7 +113,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/loop.php' );
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
-	include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
+	include_once( get_stylesheet_directory() . '/inc/site-footer-swp.php' );
 
 	// Editor
 	include_once( get_stylesheet_directory() . '/inc/disable-editor.php' );
