@@ -1,9 +1,13 @@
+/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	background: $white;
-	border-bottom: 1px solid $border-color;
 	position: relative;
 	min-height: 49px;
 }
@@ -18,10 +22,9 @@
 	h1.site-title,
 	p.site-title {
 		margin: 0;
-		font-size: 24px;
-		line-height: 30px;
-
-		padding: 8px;
+		font-size: 1.5rem;
+		line-height: 1.875rem;
+		font-weight: 700;
 
 		a {
 			color: $base-color;
