@@ -146,27 +146,57 @@ function ea_child_theme_setup() {
 	add_theme_support( 'align-wide' );
 
 	// -- Disable custom font sizes
-	add_theme_support( 'disable-custom-font-sizes' );
+	//add_theme_support( 'disable-custom-font-sizes' );
 
 	// -- Editor Font Styles
 	add_theme_support( 'editor-font-sizes', array(
 		array(
-			'name'      => __( 'Small', 'ea_genesis_child' ),
-			'shortName' => __( 'S', 'ea_genesis_child' ),
-			'size'      => 14,
-			'slug'      => 'small'
+			'name'      => __( 'Tiny', 'setup_be' ),
+			'shortName' => __( 'T', 'setup_be' ),
+			'size'      => 12,
+			'slug'      => 'tiny'
 		),
 		array(
-			'name'      => __( 'Normal', 'ea_genesis_child' ),
-			'shortName' => __( 'M', 'ea_genesis_child' ),
-			'size'      => 20,
+			'name'      => __( 'Smaller', 'setup_be' ),
+			'shortName' => __( 'S2', 'setup_be' ),
+			'size'      => 14,
+			'slug'      => 'smaller'
+		),
+		array(
+			'name'      => __( 'Base', 'setup_be' ),
+			'shortName' => __( 'B', 'setup_be' ),
+			'size'      => 16,
+			'slug'      => 'base'
+		),
+		array(
+			'name'      => __( 'Normal', 'setup_be' ),
+			'shortName' => __( 'N', 'setup_be' ),
+			'size'      => 18,
 			'slug'      => 'normal'
 		),
 		array(
-			'name'      => __( 'Large', 'ea_genesis_child' ),
-			'shortName' => __( 'L', 'ea_genesis_child' ),
+			'name'      => __( 'Small', 'setup_be' ),
+			'shortName' => __( 'S', 'setup_be' ),
+			'size'      => 20,
+			'slug'      => 'small'
+		),
+		array(
+			'name'      => __( 'Medium', 'setup_be' ),
+			'shortName' => __( 'M', 'setup_be' ),
 			'size'      => 24,
+			'slug'      => 'medium'
+		),
+		array(
+			'name'      => __( 'Large', 'setup_be' ),
+			'shortName' => __( 'L', 'setup_be' ),
+			'size'      => 36,
 			'slug'      => 'large'
+		),
+		array(
+			'name'      => __( 'Huge', 'setup_be' ),
+			'shortName' => __( 'H', 'setup_be' ),
+			'size'      => 48,
+			'slug'      => 'huge'
 		),
 	) );
 

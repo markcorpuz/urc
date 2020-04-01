@@ -1,7 +1,10 @@
+/* SETUP-BE | 1.0.0 | 200326 | assets/scss/modules/base-styles.scss
+---------------------------------------------------------------------------------------------------- */
+
 @mixin base-style {
 	color: $base-color;
 	font-family: $sans-serif;
-	@include font-sizes( 18px, 20px );
+	@include font-sizes( 1rem, 1.125rem );
 	font-weight: 400;
 	line-height: 1.55;
 

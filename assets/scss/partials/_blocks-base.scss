@@ -1,3 +1,6 @@
+/* SETUP-BE | 1.0.0 | 200331 | assets/scss/partials/blocks-base.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Typographical Elements
 --------------------------------------------- */
 
@@ -75,18 +78,52 @@ p {
 	margin: 0 0 $base-margin;
 	padding: 0;
 
-	&.large,
-	&.has-large-font-size {
-    	@include font-sizes( 21px, 24px );
+	&.huge,
+	&.has-huge-font-size {
+		@include font-sizes( 2.25rem, 2.625rem, 3rem );
+		//@include font-sizes( 36px, 42px, 48px );
 	}
 
-	&.has-normal-font-size {
-		@include font-sizes( 18px, 20px );
+	&.large,
+	&.has-large-font-size {
+		@include font-sizes( 1.5rem, 1.875rem, 2.25rem );
+		//@include font-sizes( 24px, 30px, 36px );
+	}
+
+	&.medium,
+	&.has-medium-font-size {
+		@include font-sizes( 1.25rem, 1.375rem, 1.5rem );
+		//@include font-sizes( 20px, 22px, 24px );
 	}
 
 	&.small,
 	&.has-small-font-size {
-	    font-size: 14px;
+		@include font-sizes( 1.125rem, 1.25rem );
+		//@include font-sizes( 16px, 20px );
+	}
+
+	&.normal,
+	&.has-normal-font-size {
+		@include font-sizes( 1rem, 1.125rem );
+		//@include font-sizes( 16px, 18px );
+	}
+
+	&.base,
+	&.has-base-font-size {
+		@include font-sizes( 0.875rem, 1rem );
+		//@include font-sizes( 16px );
+	}
+
+	&.smaller,
+	&.has-smaller-font-size {
+		font-size: 0.875rem;
+		//font-size: 14px;
+	}
+
+	&.tiny,
+	&.has-tiny-font-size {
+		font-size: 0.75rem;
+		//font-size: 12px;
 	}
 }
 
@@ -120,17 +157,31 @@ h6 {
 }
 
 h1 {
-    @include font-sizes( 34px, 42px, 46px );
+	@include font-sizes( 2.25rem, 2.625rem, 3rem );
+	//@include font-sizes( 36px, 42px, 48px );
 }
 
 h2 {
-    @include font-sizes( 26px, 32px, 36px );
+	@include font-sizes( 1.5rem, 1.875rem, 2.25rem );
+	//@include font-sizes( 24px, 30px, 36px );
 }
 
 h3 {
-    @include font-sizes( 22px, 26px, 28px );
+	@include font-sizes( 1.25rem, 1.375rem, 1.5rem );
+	//@include font-sizes( 20px, 22px, 24px );
 }
 
-h4, h5, h6 {
-    @include font-sizes( 18px, 22px );
+h4 {
+	@include font-sizes( 1.125rem, 1.25rem );
+	//@include font-sizes( 18px, 20px );
+}
+
+h5 {
+	@include font-sizes( 1rem, 1.125rem );
+	//@include font-sizes( 16px, 18px );
+}
+
+h6 {
+	@include font-sizes( 0.875rem, 1rem );
+	//@include font-sizes( 14px, 16px );
 }
