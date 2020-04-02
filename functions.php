@@ -47,6 +47,7 @@ function ea_global_enqueues() {
 	wp_register_style( 'ea-fonts', setup_be_theme_fonts_url() );
 	wp_register_style( 'ea-critical', get_stylesheet_directory_uri() . '/assets/css/critical.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/critical.css' ) );
 	wp_register_style( 'ea-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
+	wp_register_style( 'setup-be-guide', get_stylesheet_directory_uri() . '/assets/css/guide.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/guide.css' ) );
 
 	if( $using_critical_css = true ) {
 		wp_enqueue_style( 'ea-critical' );
@@ -68,6 +69,7 @@ function ea_enqueue_noncritical_css() {
 	wp_enqueue_style( 'ea-critical' );
 	wp_enqueue_style( 'ea-style' );
 	wp_enqueue_style( 'ea-fonts' );
+	wp_enqueue_style( 'setup-be-guide' );
 }
 
 /**
