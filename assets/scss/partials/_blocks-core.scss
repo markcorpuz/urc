@@ -1,16 +1,68 @@
+/* SETUP-BE | 1.0.0 | 200416 | assets/scss/partials/blocks-core.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Button
 --------------------------------------------- */
 
 $default: nth( nth( $brand_colors, 1 ), 1 ); // first color in $brand_colors array
 
+.wp-block-buttons {
+
+	.wp-block-button {
+		margin: 0;
+	}
+
+	.wp-block-button.is-style-full {
+		display: block;
+	}
+
+}
+
 .wp-block-button__link {
-	border: 2px solid brand-color( $default, 'darken' );
+	//border: 2px solid brand-color( $default, 'darken' );
 	border-radius: 3px;
-	font-size: 20px;
+	font-size: 1.125rem;
+	//font-size: 18px;
 	font-weight: 700;
-	line-height: 32px;
-	padding: 16px 32px;
+	line-height: 1.2;
+	//line-height: 32px;
+	padding: 16px 18px;
 	text-decoration: none;
+
+	.tiny & {
+		font-size: 0.75rem;
+		//font-size: 12px;
+		line-height: 1.2;
+		padding: 6px 12px;
+	}
+
+	.smaller & {
+		font-size: 0.875rem;
+		//font-size: 14px;
+		line-height: 1.2;
+		padding: 8px 14px;
+	}
+
+	.small & {
+		font-size: 1.25rem;
+		//font-size: 20px;
+		line-height: 1.2;
+		padding: 18px 20px;
+	}
+
+	.medium & {
+		font-size: 1.5rem;
+		//font-size: 24px;
+		line-height: 1.2;
+		padding: 20px 24px;
+	}
+
+	.large & {
+		font-size: 2.25rem;
+		//font-size: 36px;
+		line-height: 1.2;
+		padding: 24px 36px;
+	}
 
 	.is-style-full &,
 	&.full {
