@@ -240,3 +240,46 @@ img {
 	}
 
 }
+
+/* YouTube
+--------------------------------------------- */
+
+.wp-block-embed__wrapper {
+
+	.wp-block-embed-youtube.alignwide &,
+	.wp-block-embed-youtube.alignfull & {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		height: 0;
+	}
+	@include media("<=tablet") {
+		.wp-block-embed-youtube & {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			height: 0;
+		}
+	}	
+
+}
+
+iframe {
+
+	.wp-block-embed-youtube.alignwide &,
+	.wp-block-embed-youtube.alignfull & {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	@include media("<=tablet") {
+		.wp-block-embed-youtube & {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+}
