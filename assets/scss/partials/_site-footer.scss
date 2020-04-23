@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-footer.scss
+/* SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/site-footer.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Footer Widgets
@@ -44,28 +44,56 @@
 	}
 
 	& .footer-widgets-1 {
-		.widget:first-child {
-			margin-top: 0;
+		@include media("<=medium") {
+			.widget:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	& .footer-widgets-2 {
+		@include media("<=small") {
+			.widget:first-child {
+				margin-top: 0;
+			}
+		}
+		@include media("<=smaller") {
+			.widget:first-child {
+				margin-top: 2rem;
+			}
+		}
+	}
+
+	& .footer-widgets-1,
+	& .footer-widgets-2,
+	& .footer-widgets-3 {
+		@include media(">small") {
+			.widget:first-child {
+				margin-top: 0;
+			}
 		}
 	}
 
 	.widget {
-		margin-top: 3rem;
+		@include media("<=medium") {
+			margin-top: 2rem;
+		}
 	}
 
 	.widget-title {
 		text-transform: uppercase;
 	}
 
-	@include media(">=tablet") {
-		.wrap {
-			@include columns( 3, 'div' );
+	.wrap {
+		@include media(">smaller") {
+			@include columns(2);
 		}
 
-		.widget:first-child {
-			margin-top: 0;
+		@include media(">small") {
+			@include columns(3);
 		}
 	}
+
 }
 
 /* Site Footer
