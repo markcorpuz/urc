@@ -1,3 +1,6 @@
+/* SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/archive.scss
+---------------------------------------------------------------------------------------------------- */
+
 .archive {
 
 	.site-main {
@@ -8,14 +11,37 @@
 			margin-bottom: 48px;
 		}
 
-		@include media(">small", "<medium") {
+		@include media(">smaller") {
 			@include columns(2);
+		}
+
+		@include media(">small") {
+			@include columns(3);
 		}
 
 		@include media(">=medium") {
 			@include columns(4);
 		}
+
 	}
+}
+
+.archive.content-sidebar {
+
+	.site-main {
+
+		align-content: start;
+
+		@include media(">=medium") {
+			@include columns(2);
+		}
+
+		@include media(">=large") {
+			@include columns(3);
+		}
+
+	}
+
 }
 
 /* Archive Header
